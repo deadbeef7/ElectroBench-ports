@@ -20,10 +20,10 @@ Categories:
   - Development
 License: GPL-3.0-only
 AuthorName: deadbeef7
-SourceCode: https://github.com/deadbeef7/ElectroBench
-IssueTracker: https://github.com/deadbeef7/ElectroBench/issues
+SourceCode: https://github.com/deadbeef7/ElectroBench-ports
+IssueTracker: https://github.com/deadbeef7/ElectroBench-ports/issues
 RepoType: git
-Repo: https://github.com/deadbeef7/ElectroBench
+Repo: https://github.com/deadbeef7/ElectroBench-ports
 
 Builds:
   - versionName: '0.5'
