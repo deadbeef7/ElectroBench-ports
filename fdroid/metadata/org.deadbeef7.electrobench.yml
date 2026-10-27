@@ -31,7 +31,7 @@ AllowedAPKSigningKeys : 0d8471150068ec0aa6f2e2fc0e46053869f18418c6a422ae61fcd1a1
 Builds:
   - versionName: '0.5'
     versionCode: 1
-    commit: 094e53542c877f336af603633652e72f7f1963a5
+    commit: 0e1c1ab6baeb08b5e6d40d094c59dd6f179cf2ef
     # NDK r26d. F-Droid installs this revision into its SDK and exports
     # ANDROID_NDK / ANDROID_NDK_HOME, which the Makefile reads ($($$NDK$$) is
     # passed explicitly so the recipe does not depend on that variable name).
