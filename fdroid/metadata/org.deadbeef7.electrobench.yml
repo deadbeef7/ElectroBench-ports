@@ -25,7 +25,7 @@ IssueTracker: https://github.com/deadbeef7/ElectroBench-ports/issues
 RepoType: git
 Repo: https://github.com/deadbeef7/ElectroBench-ports
 
-Binaries: 
+Binaries: https://github.com/deadbeef7/ElectroBench-ports/releases/download/v0.5/ElectroBench-android.1.apk
 AllowedAPKSigningKeys : 0d8471150068ec0aa6f2e2fc0e46053869f18418c6a422ae61fcd1a11e5ddb89
 
 Builds:
