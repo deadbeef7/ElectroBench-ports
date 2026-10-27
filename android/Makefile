@@ -232,9 +232,9 @@ $(ALIGNED): FORCE $(SO_FILES) $(RES) $(SHADERS) $(ROOT)/android/AndroidManifest.
 	done
 	$(AAPT2) compile --dir $(BUILD)/res -o $(BUILD)/res.zip
 	$(AAPT2) link -o $(BUILD)/app-unsigned.apk -I $(PLATFORM_JAR) \
-	    --manifest $(ROOT)/android/AndroidManifest.xml -A $(STAGE)/assets \
+	     -A $(STAGE)/assets \
 	    --min-sdk-version $(MIN_SDK) --target-sdk-version $(TARGET_SDK) \
-	    --version-code $(VERSION_CODE) --version-name $(VERSION_NAME) $(BUILD)/res.zip
+	    --version-code $(VERSION_CODE) --version-name $(VERSION_NAME) $(BUILD)/res.zip --manifest $(ROOT)/android/AndroidManifest.xml
 	cd $(STAGE) && zip -q -0 -r -X $(BUILD)/app-unsigned.apk lib
 	$(ZIPALIGN) -p -f 4 $(BUILD)/app-unsigned.apk $@
 	@echo "aligned APK: $@ ($$(stat -c%s $@) bytes)"
