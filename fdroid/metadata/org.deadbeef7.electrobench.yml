@@ -25,6 +25,9 @@ IssueTracker: https://github.com/deadbeef7/ElectroBench-ports/issues
 RepoType: git
 Repo: https://github.com/deadbeef7/ElectroBench-ports
 
+Binaries: 
+AllowedAPKSigningKeys : 0d8471150068ec0aa6f2e2fc0e46053869f18418c6a422ae61fcd1a11e5ddb89
+
 Builds:
   - versionName: '0.5'
     versionCode: 1
@@ -32,16 +35,16 @@ Builds:
     # NDK r26d. F-Droid installs this revision into its SDK and exports
     # ANDROID_NDK / ANDROID_NDK_HOME, which the Makefile reads ($($$NDK$$) is
     # passed explicitly so the recipe does not depend on that variable name).
-    ndk: 26.3.11579264
     build:
       - make -C android unsigned SDK=$$SDK$$ NDK=$$NDK$$ VERSION_CODE=$$VERCODE$$ VERSION_NAME=$$VERSION$$
+    ndk: 26.3.11579264
     output: build-android/ElectroBench-*-unsigned.apk
 
 AutoUpdateMode: Version
 # Changed from Tags to Branches so F-Droid monitors a branch head instead of git tags
 UpdateCheckMode: Tags
 # Tell F-Droid exactly which branch to scan for changes and read the Makefile from
-UpdateCheckData: 'ports|android/Makefile|VERSION_CODE\s*\?=\s*(\d+)|android/Makefile|VERSION_NAME\s*\?=\s*([0-9][0-9.]*)'
+UpdateCheckData: ports|android/Makefile|VERSION_CODE\s*?=\s*(\d+)|android/Makefile|VERSION_NAME\s*?=\s*([0-9][0-9.]*)
 
 CurrentVersion: '0.5'
 CurrentVersionCode: 1
