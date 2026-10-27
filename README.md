@@ -6,6 +6,8 @@ Of course, the PSP benchmark is for testing how efficient your overclocks are (s
 
 The PSVita version is available on VitaDB.
 
+Run with make -C (android or psp or vita) more instructions coming soon
+
 To donate : send me an email : deadbeef1337ayoub@proton.me
 
 
